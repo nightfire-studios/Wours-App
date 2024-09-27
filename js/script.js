@@ -11,6 +11,13 @@ const footer_buttons = document.querySelectorAll('.footer_buttons')
 const all_views = [analytics_container,task_container,history_container]
 
 // End variable declaratrion
+const hapticVibration = ()=>{
+    if(navigator.vibrate){
+        navigator.vibrate(30)
+    }else{
+        alert('Your device does not support haptic feedback')
+    }
+  }
 
 
 
@@ -29,6 +36,8 @@ add_button.onclick= ()=>{
             behavior: 'smooth'
         }
     )
+
+    hapticVibration()
 }
 
 analytics.onclick = () => {
@@ -40,7 +49,7 @@ analytics.onclick = () => {
         }
     )
 
-    
+    hapticVibration()
 }
 
 history_btn.onclick = ()=>{
@@ -53,6 +62,8 @@ history_btn.onclick = ()=>{
             behavior: 'smooth'
         }
     )
+
+    hapticVibration()
 }
 
 trey.scrollLeft = (trey.scrollWidth - trey.offsetWidth) * .5
@@ -123,4 +134,5 @@ const getElementClosestToView = () => {
       })
   });
 
+ 
   

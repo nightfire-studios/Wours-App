@@ -185,14 +185,17 @@ h1{
 
 .settings{
     width: 40px;
+    cursor: pointer;
 }
 
 .analysis{
     width: 30px;
+    cursor: pointer;
 }
 
 .history_btn{
     width: 30px;
+    cursor: pointer;
 }
 
 .plus{
