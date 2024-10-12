@@ -20,7 +20,7 @@ const hapticVibration = ()=>{
     }else{
         console.log('this device does not support haptic feedback')
     }
-  }
+           }
 
 
 
@@ -45,7 +45,7 @@ add_button.onclick= ()=>{
 
 analytics.onclick = () => {
     const targetPosition = (trey.scrollWidth - trey.offsetWidth) * -.5
-    trey.scrollTo(
+    trey.scrollTo(   
         {
             left: targetPosition,
             behavior: 'smooth'
