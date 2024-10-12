@@ -12,6 +12,7 @@ const task_group_menu = document.querySelector('.task_group')
 var heading_toggle = true
 const all_views = [analytics_container,task_container,history_container]
 
+
 // End variable declaratrion
 const hapticVibration = ()=>{
     if('vibrate' in navigator){
@@ -137,6 +138,38 @@ const getElementClosestToView = () => {
   });
 
   //Toggle task group menu...
+  task_group_button.ontouchstart = ()=>{
+    task_group_menu.classList.toggle('toggle_menu')
+    hapticVibration()
+
+    const task_group_nav = task_group_menu.querySelector('nav') 
+    const task_group_heading = task_group_nav.querySelector('h4')
+
+    setTimeout(()=>{
+        task_group_nav.classList.toggle('delay_nav')
+    },500)
+
+    
+
+    if(heading_toggle =!heading_toggle){
+        setTimeout(()=>{
+            task_group_heading.classList.toggle('delay_heading')
+            task_group_heading.style.cssText=`
+            opacity:1;
+            transition:.5s;
+        `
+        },900)
+    }else{
+        task_group_heading.style.cssText=`
+            opacity:0;
+            transition:0s;
+        `
+    }
+
+  
+  }
+
+    //Toggle task group menu...
   task_group_button.ontouchstart = ()=>{
     task_group_menu.classList.toggle('toggle_menu')
     hapticVibration()
