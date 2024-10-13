@@ -238,6 +238,15 @@ h1{
     font-weight: bold;
 }
 
+:is(
+    .analysis,
+    .history,
+    .plus
+){
+    transition: .5s;
+    cursor: pointer;
+}
+
 .settings{
     width: 40px;
     cursor: pointer;
